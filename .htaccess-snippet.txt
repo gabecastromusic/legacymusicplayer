@@ -1,0 +1,8 @@
+# ─── Legacy Music Player share-link domain ───
+# Redirect root of legacymusicplayer.com to /lmp/ on the same branded domain.
+# Paste the 4 uncommented lines below at the TOP of your existing
+# public_html/.htaccess file (above any other RewriteRule directives).
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?legacymusicplayer\.com$ [NC]
+RewriteRule ^$ https://www.legacymusicplayer.com/lmp/ [R=301,L]
